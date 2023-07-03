@@ -1,0 +1,24 @@
+{
+	"name": "next-monorepo",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"add:root": "yarn add --ignore-workspace-root-check",
+		"mint-web:dev": "yarn --cwd apps/mint-web dev",
+		"main-web:dev": "yarn --cwd apps/main-web dev",
+		"mint-web:build": "yarn --cwd apps/mint-web build",
+		"main-web:build": "yarn --cwd apps/main-web build"
+	},
+	"workspaces": [
+		"apps/*"
+	],
+	"dependencies": {
+		"@emotion/react": "^11.11.1",
+		"@emotion/styled": "^11.11.0",
+		"@nwaycorp/wl-designsystem": "1.4.6",
+		"add": "^2.0.6",
+		"yarn": "^1.22.19"
+	}
+}
